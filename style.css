@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+/* font-family: 'Nunito', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+:root {
+    --black: rgb(0, 0, 0);
+    --white: rgb(255, 255, 255);
+    --red: rgb(214, 29, 29);
+}
+
+p {
+    font-weight:900;
+    color: var(--black);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* HEADER STYLING */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s ease-in;
+}
+
+header .sticky {
+    background:#fff;
+    padding: 10px 100px ;
+}
+
+.logo {
+    font-size: 5vmin;
+    font-weight: 900;
+    color: var(--white);
+}
+
+.logo span {
+    color: var(--red);
+}
+
+.navigation {
+    display: flex;
+    /* position: relative; */
+}
+
+.navigation li {
+    margin: 0px 20px ;
+}
+
+.navigation li a {
+    color: var(--white);
+    font-size: 3vmin;
+    font-weight: 900;
+}
+
+
+/* BANNER STYLING */
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url(assets/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner .content {
+    max-width: 80%;
+    text-align: center;
+}
+
+.content h2 {
+    color: var(--white);
+    font-size: 7vmin;
+    font-weight: 900;
+}
+
+.content p {
+    color: var(--white);
+    font-size: 3.5vmin;
+    margin: 40px auto;
+}
+
+.content a {
+    color: var(--white);
+    font-weight: 900;
+    font-size: 4vmin;
+    background: var(--red);
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    border-radius: 20px;
+    transition: 1s ease;
+}
+
+.content a:hover{
+    box-shadow: 0px 0px 20px var(--white);
+    letter-spacing: 10px;
+}
