@@ -45,7 +45,11 @@ header {
     justify-content: space-between;
     align-items: center;
     transition: 0.5s ease-in;
-    background: var(--black);
+    /* background: var(--black); */
+}
+.sticky {
+    background: chartreuse;
+    padding: 20px 80px;
 }
 
 
@@ -319,6 +323,7 @@ header {
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url(assets/bg2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .reviews span {
@@ -377,6 +382,7 @@ header {
 }
 
 .reviews .content .text p{
+    font-size: 3vmin;
     margin: 0px 50px;
     color: var(--white);
     font-weight: 900;
@@ -387,4 +393,32 @@ header {
     color: var(--red);
     font-size: 4vmin;
     margin: 0px 50px;
+}
+
+/* CONTACT SECTION STYLING */
+.contact {
+    background: linear-gradient(90deg, rgba(255,0,0,0.5) 11%, rgba(236,69,0,0.5) 40%, rgba(231,157,0,0.5) 78%, rgba(255,203,0,0.5) 100%);
+}
+
+.contact .title h2{
+    padding: 50px 0px;
+    font-size: 6vmin;
+    text-align: center;
+}
+
+.contact .title span {
+     color: var(--white);
+    font-weight: 900;
+    font-size: 6.5vmin;
+}
+
+.contact .contactForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 20px black;
+    max-width: 50%;
+    margin: 20px auto;
+    padding: 20px 0px;
 }
