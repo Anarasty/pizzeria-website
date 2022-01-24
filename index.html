@@ -18,7 +18,7 @@
         <li><a href="#menu">Menu</a></li>
         <li><a href="#chefs">Chefs</a></li>
         <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </header>
     <section class="banner" id="banner">
@@ -226,7 +226,7 @@
         </div>
       </div>
     </section>
-
+    <div id="contact"></div><br><br>
     <section class="contact">
       <div class="title">
         <h2><span>C</span>ontact <span>U</span>s</h2>
@@ -234,27 +234,21 @@
       <div class="contactForm">
         <h3>Send us a message</h3>
         <form>
-          <input type="text" placeholder="Your name" />
-          <input type="email" placeholder="Your email" />
-          <input type="submit" value="Send!" />
+          <input type="text" placeholder="Your name" required />
+          <input type="email" placeholder="Your email" required />
+          <textarea title="wrong" minlength="10" maxlength="225" required placeholder="Your message"></textarea>
+          <input type="submit" value="Send message" />
         </form>
       </div>
     </section>
-
-    <!-- <script type="text/javascript">
-      window.addEventListener('scroll', function(){
-        const header = document.querySelector('header');
-        header.classList.toggle("sticky", window.scrollY > 0);
-      });
-    </script>  -->
-
-    <!-- <script type="text/javascript">
-      window.addEventListener("scroll", function(){
-        var header = document.querySelector("header");
-        header.classList.toggle("sticky", window.scrollY > 0)
-      })
-    </script> -->
-
-
+    <footer>
+      <h3>Copirighting &#169; Pizzeria 2020 - 2022 all rights reserved</h3>
+      <ul class="media-links">
+        <li><a href=""><img src="assets/twitter.png" alt="twitter"></a></li>
+        <li><a href=""><img src="assets/instagram.png" alt="instargram"></a></li>
+        <li><a href=""><img src="assets/facebook.png" alt="facebook"></a></li>
+        <li><a href=""><img src="assets/reddit.png" alt="reddit"></a></li>
+      </ul>
+    </footer>
   </body>
 </html>

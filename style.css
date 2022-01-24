@@ -48,8 +48,16 @@ header {
     /* background: var(--black); */
 }
 .sticky {
-    background: chartreuse;
-    padding: 20px 80px;
+    background: var(--white);
+    padding: 20px 40px;
+}
+
+.sticky .logo {
+    color: var(--black);
+}
+
+.sticky .navigation li a{
+    color: var(--black);
 }
 
 
@@ -238,11 +246,17 @@ header {
     height: 100%;
     object-fit: cover;
     transition: 0.5s ease-out;
+    animation: rotate1 infinite linear 40s;
+	animation-play-state: paused;
 }
 
 .menu .content .box .imgBox img:hover {
-    cursor: pointer;
-    transform: scale(1.06);
+    animation-play-state: running;
+}
+
+@keyframes rotate1{
+    0%{ transform: rotate(-360deg); }
+    100%{ transform: rotate(360deg); }
 }
 
 .menu .content .box .text {
@@ -298,7 +312,16 @@ header {
     object-fit: cover;
     border-radius: 50%;
     transition: 0.5s ease-out;
+    /* animation-name: povar;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; */
 }
+/* 
+@keyframes povar {
+    0%{transform: rotate(-360deg);}
+    100%{transform: rotate(360deg);}
+} */
 
 .chefs .content .box .text {
     color: var(--black);
@@ -320,7 +343,7 @@ header {
 /* STYLING REVIEWS */
 
 .reviews {
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url(assets/bg2.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)) ,url(assets/bg2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -396,10 +419,6 @@ header {
 }
 
 /* CONTACT SECTION STYLING */
-.contact {
-    background: linear-gradient(90deg, rgba(255,0,0,0.5) 11%, rgba(236,69,0,0.5) 40%, rgba(231,157,0,0.5) 78%, rgba(255,203,0,0.5) 100%);
-}
-
 .contact .title h2{
     padding: 50px 0px;
     font-size: 6vmin;
@@ -407,7 +426,7 @@ header {
 }
 
 .contact .title span {
-     color: var(--white);
+     color: var(--red);
     font-weight: 900;
     font-size: 6.5vmin;
 }
@@ -417,8 +436,164 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    box-shadow: 0px 0px 20px black;
-    max-width: 50%;
+    box-shadow: 0px 0px 20px var(--black);
+    max-width: 50%; 
     margin: 20px auto;
     padding: 20px 0px;
+    border-radius: 20px;
+}
+
+.contact .contactForm input {
+    width: 100%;
+    margin: 30px auto;
+    font-size: 2vmin;
+    padding: 10px;
+    font-weight: 500;
+    border: 2px solid var(--black);
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.contact .contactForm h3 {
+    font-size: 3vmin;
+    font-weight: 900;
+    border-bottom: 5px solid var(--red);
+}
+
+.contact .contactForm input[type=text]:hover, input[type=email]:hover {
+    background-color: rgb(212, 212, 212);
+}
+
+.contact .contactForm input[type=submit]{
+    border: 5px solid var(--red);
+    border-radius: 20px;
+    color: var(--white);
+    font-weight: 900;
+    font-size: 3vmin;
+    background-color: var(--black);
+}
+
+.contact .contactForm input[type=submit]:hover{
+    box-shadow: 0px 0px 10px var(--black);
+    transform: scale(1.02);
+    color: var(--black);
+    background: var(--red);
+    border: 5px solid var(--white);
+}
+
+.contact .contactForm textarea {
+    margin: 30px auto;
+    resize: none;
+    width: 100%;
+    height: 100px;
+    border: 2px solid var(--black);
+    border-radius: 5px;
+    font-weight: 900;
+    padding: 10px;
+    transition: all 0.5s ease;
+}
+.contact .contactForm textarea:hover {
+    background-color: rgb(212, 212, 212);
+} 
+
+/* FOOTER STYLING  */
+footer {
+    margin-top: 100px;
+    background: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
+}
+
+footer .media-links {
+    display: flex;
+    margin: 20px;
+}
+
+footer .media-links li {
+    margin: 20px;
+}
+
+footer h3 {
+    font-size: 3vmin;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+footer img {
+    transition: all 0.5s ease;
+}
+
+footer img:hover{
+    transform: scale(1.1);
+    filter: brightness(0.5);
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 992px) {
+    header {
+        flex-direction: column;
+    }
+
+    .about {
+        padding: 20px;
+    }
+
+    .about .row {
+        flex-direction: column;
+    }
+
+    .about .row .col {
+        width: 100%;
+    }
+
+    .about .row .col .imgBox {
+        width: 100%;
+        /* min-height: 100%; */
+        height: 500px;
+        margin-top: 100px;
+    }
+
+    .chefs .content  {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reviews .content .box {
+        max-width: 70%;
+        flex-direction: row;
+        border: 10px solid var(--white);
+         flex-direction: column;
+    }
+
+    .reviews .content .box .imgBox {
+        width: 100%;
+        display: flex;
+    }
+
+    .reviews .content .box .imgBox img {
+        max-width: 50%;
+        margin: 20px auto;
+        height: auto;
+    }
+
+    .contact .contactForm {
+        max-width: 80%;
+        margin: 20px auto;
+        padding: 20px 0px;
+    }
+
+    .contact .contactForm input {
+        width: 80%;
+        margin: 30px 60px;
+    }
+
+    .contact .contactForm textarea {
+        width: 80%;
+        margin: 0px 60px;
+    }
+
 }
