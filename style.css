@@ -275,6 +275,7 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 20px auto;
 }
 
 .chefs .title h2 {
@@ -399,16 +400,17 @@ header {
 .reviews .content .box .imgBox img{
     max-width: 100%;
     height: 100%;
-    border-radius: 40% 5%;
+    border: 5px solid var(--white);
+    border-radius: 50%;
     margin: 20px;
-    filter: drop-shadow(0px 0px 10px var(--white));
+    filter: drop-shadow(0px 0px 10px var(--black));
 }
 
 .reviews .content .text p{
     font-size: 3vmin;
     margin: 0px 50px;
     color: var(--white);
-    font-weight: 900;
+    font-weight: 500;
     font-style: italic;
 }
 
@@ -416,6 +418,12 @@ header {
     color: var(--red);
     font-size: 4vmin;
     margin: 0px 50px;
+}
+
+.reviews .text h2 {
+    margin: 0px 50px;
+    font-size: 4vmin;
+    font-weight: 900;
 }
 
 /* CONTACT SECTION STYLING */
@@ -596,4 +604,27 @@ footer img:hover{
         margin: 0px 60px;
     }
 
+}
+
+
+@media only screen and (max-width: 768px) {
+    .reviews .content .box {
+        max-width: 90%;
+    }
+
+    .contact .contactForm {
+        max-width: 90%;
+        margin: 20px auto;
+        padding: 20px 0px;
+    }
+
+    .contact .contactForm input {
+        width: 90%;
+        margin: 30px 25px;
+    }
+
+    .contact .contactForm textarea {
+        width: 90%;
+        margin: 30px 25px;
+    }
 }
