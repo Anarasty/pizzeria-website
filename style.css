@@ -409,13 +409,13 @@ header {
     height: 100%;
     border: 5px solid var(--white);
     border-radius: 50%;
-    margin: 20px;
+    margin: 10px auto;
     filter: drop-shadow(0px 0px 10px var(--black));
 }
 
 .reviews .content .text p{
     font-size: 3vmin;
-    margin: 0px 50px;
+    margin: 0px auto;
     color: var(--white);
     font-weight: 500;
     font-style: italic;
@@ -424,11 +424,12 @@ header {
 .reviews .content .text h3 {
     color: var(--red);
     font-size: 4vmin;
-    margin: 0px 50px;
+    margin: 0px auto;
 }
 
 .reviews .text h2 {
-    margin: 0px 50px;
+    text-align: center;
+    margin: 0px auto;
     font-size: 4vmin;
     font-weight: 900;
 }
@@ -625,10 +626,16 @@ footer img:hover{
 
 
 @media only screen and (max-width: 768px) {
+
+    .reviews .title {
+        margin: 50px auto;
+    }
     .reviews .content .box {
         max-width: 90%;
+        margin: 10px;
+        border: 10px solid var(--white);
+        padding: 10px;
     }
-
     .contact .contactForm {
         max-width: 90%;
         margin: 20px auto;
@@ -643,5 +650,9 @@ footer img:hover{
     .contact .contactForm textarea {
         width: 90%;
         margin: 30px 25px;
+    }
+
+    footer img {
+        max-width: 80%;
     }
 }
